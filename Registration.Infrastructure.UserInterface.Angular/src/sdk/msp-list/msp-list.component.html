@@ -1,0 +1,17 @@
+<ng-container *ngIf="isLoaded">
+  <div id="MspList" class="container" >
+    <table class="table"> 
+      <msp-list-header [listConfiguration]="listConfiguration"></msp-list-header>
+      <msp-list-body [listConfiguration]="listConfiguration" (rowSelected)="emitRowSelected($event)"></msp-list-body>
+      <msp-list-footer></msp-list-footer>
+    </table>
+    <ng-container *ngIf="!hasEntityData">
+      <ng-container *ngTemplateOutlet="DontHaveEntityData"></ng-container>
+    </ng-container>
+  </div>
+</ng-container>
+
+<ng-template #DontHaveEntityData>
+    <h5 fxFlex fxLayoutAlign="center">{{noEntityDataMessage}}</h5>
+    <msp-button type='icon' icon='settings_backup_restore' (clicked)="listConfiguration.actions.refresh()"></msp-button>
+</ng-template>

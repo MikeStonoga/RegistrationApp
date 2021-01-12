@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Registration.Domain", "Registration.Domain\Registration.Domain.csproj", "{A9CF1C2B-AE89-432D-B910-A5E75D9B8B42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Registration.UseCases", "Registration.UseCases\Registration.UseCases.csproj", "{BD6A491F-E447-4F29-A323-024410DBD64B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Registration.InterfaceAdapters.Gateways.Persistence", "Registration.InterfaceAdapters.Gateways.Persistence\Registration.InterfaceAdapters.Gateways.Persistence.csproj", "{BB67C37C-0643-4F73-8332-2FF3BACD2B7F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Registration.InterfaceAdapters.Controllers", "Registration.InterfaceAdapters.Controllers\Registration.InterfaceAdapters.Controllers.csproj", "{C5DF747F-B79E-4EA8-B4B9-B9F950374D1B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Registration.Infrastructure.Persistence.EntityFrameworkCore.SqlServer", "Registration.Infrastructure.Persistence.EntityFrameworkCore.SqlServer\Registration.Infrastructure.Persistence.EntityFrameworkCore.SqlServer.csproj", "{CF813A2C-E3CB-421B-999A-2F5B64E7CA06}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Registration.Infrastructure.ApplicationDelivery.WebHost", "Registration.Infrastructure.ApplicationDelivery.WebHost\Registration.Infrastructure.ApplicationDelivery.WebHost.csproj", "{535D5841-C277-489B-9D8A-52FA68CCB2EB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A9CF1C2B-AE89-432D-B910-A5E75D9B8B42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9CF1C2B-AE89-432D-B910-A5E75D9B8B42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9CF1C2B-AE89-432D-B910-A5E75D9B8B42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9CF1C2B-AE89-432D-B910-A5E75D9B8B42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD6A491F-E447-4F29-A323-024410DBD64B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD6A491F-E447-4F29-A323-024410DBD64B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD6A491F-E447-4F29-A323-024410DBD64B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD6A491F-E447-4F29-A323-024410DBD64B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB67C37C-0643-4F73-8332-2FF3BACD2B7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB67C37C-0643-4F73-8332-2FF3BACD2B7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB67C37C-0643-4F73-8332-2FF3BACD2B7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB67C37C-0643-4F73-8332-2FF3BACD2B7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5DF747F-B79E-4EA8-B4B9-B9F950374D1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5DF747F-B79E-4EA8-B4B9-B9F950374D1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5DF747F-B79E-4EA8-B4B9-B9F950374D1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5DF747F-B79E-4EA8-B4B9-B9F950374D1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF813A2C-E3CB-421B-999A-2F5B64E7CA06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF813A2C-E3CB-421B-999A-2F5B64E7CA06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF813A2C-E3CB-421B-999A-2F5B64E7CA06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF813A2C-E3CB-421B-999A-2F5B64E7CA06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{535D5841-C277-489B-9D8A-52FA68CCB2EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{535D5841-C277-489B-9D8A-52FA68CCB2EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{535D5841-C277-489B-9D8A-52FA68CCB2EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{535D5841-C277-489B-9D8A-52FA68CCB2EB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F86B8EE7-1842-4FE3-AED3-E098C60D58EE}
+	EndGlobalSection
+EndGlobal

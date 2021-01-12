@@ -1,0 +1,13 @@
+<msp-button
+  [matMenuTriggerFor]="menu"
+  type="icon"
+  [icon]="menuConfiguration.menuTrigger.icon"
+  [tooltip]="menuConfiguration.menuTrigger.tooltip"
+  [label]="menuConfiguration.menuTrigger.label"
+></msp-button>
+
+<mat-menu #menu="matMenu">
+  <a mat-menu-item  *ngFor="let menuItem of menuConfiguration.menuItems" [routerLink]="[menuItem.routePath]" routerLinkActive="router-link-active" (click)="emitMenuItemSelected()">
+    <msp-icon [icon]="menuItem.icon" [label]="menuItem.label"></msp-icon>
+  </a>
+</mat-menu>

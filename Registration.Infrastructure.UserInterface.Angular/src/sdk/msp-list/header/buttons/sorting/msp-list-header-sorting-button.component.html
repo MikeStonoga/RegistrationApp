@@ -1,0 +1,9 @@
+<ng-container [ngTemplateOutlet]="isSortingByThisColumnAscending() ? SortingDescendingButton: SortingAscendingButton"></ng-container>
+
+<ng-template #SortingAscendingButton>
+    <msp-button class="sortingButton" type="icon" color="#ffffff" icon="keyboard_arrow_down" (clicked)="sortAscending()"></msp-button>
+</ng-template>
+  
+<ng-template #SortingDescendingButton let-column>
+    <msp-button class="sortingButton" type="icon" color="#ffffff" icon="keyboard_arrow_up" (clicked)="sortDescending()"></msp-button>
+</ng-template>

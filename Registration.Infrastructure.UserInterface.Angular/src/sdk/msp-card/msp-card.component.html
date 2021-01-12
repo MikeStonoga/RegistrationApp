@@ -1,0 +1,16 @@
+<ng-container *ngIf="isLoaded">
+  <mat-card [style.minWidth.px]="minWidth" [style.maxWidth.px]="maxWidth" [style.minHeight.px]="minHeight" [style.maxHeight.px]="maxHeight">
+      <mat-card-header>
+        <div *ngIf="!!avatarImageSource" mat-card-avatar class="example-header-image" style.backgroundImage="url({{avatarImageSource}})"></div>
+        <mat-card-title *ngIf="!!title">{{title}}</mat-card-title>
+        <mat-card-subtitle *ngIf="!!subtitle">{{subtitle}}</mat-card-subtitle>
+      </mat-card-header>
+      <img *ngIf="!!imageSource" mat-card-image [src]="imageSource" [alt]="imageAlt">
+      <mat-card-content>
+        <ng-content></ng-content>
+      </mat-card-content>
+      <mat-card-actions>
+        <ng-container *ngTemplateOutlet="actionsTemplate; context: actionsTemplateContext"></ng-container>
+      </mat-card-actions>
+  </mat-card>
+</ng-container>

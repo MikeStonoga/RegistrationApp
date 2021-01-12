@@ -1,0 +1,21 @@
+<form [formGroup]="formGroup">
+    <mat-form-field [class]="classes" *ngIf="loaded"  appearance="standard" style="margin: 0px 15px">
+      <mat-label>{{label}}</mat-label>
+  
+      <input matInput #input
+             [formControlName]="controlName"
+             [placeholder]="placeholder"
+             [readonly]="readonly"
+             (keydown.enter)="emitValueChanged($event)"
+             (blur)="emitValueChanged($event)"
+             (click)="emitClicked()"
+      >
+      <div matSuffix fxLayout="row" [style.minWidth.px]="icon || icon2 ? 16 : icon && icon2 ? 32 : 0">
+        <msp-icon *ngIf="icon && showSuffixIcon" [icon]="icon" [size]="15" [style.maxWidth.px]="15" (click)="emitSuffixIconClicked()"></msp-icon>
+        <msp-icon *ngIf="icon2 && showSuffixIcon2" [icon]="icon2"  [size]="15" [style.maxWidth.px]="15" (click)="emitSuffixIcon2Clicked()"></msp-icon>
+      </div>
+      <mat-hint *ngIf="hint" [align]="hintAlign">{{hint}}</mat-hint>
+      <mat-hint *ngIf="hint2" [align]="hint2Align">{{hint2}}</mat-hint>
+    </mat-form-field>
+  </form>
+  

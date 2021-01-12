@@ -1,0 +1,44 @@
+<ng-container *ngIf="isLoaded">
+    <msp-creation-button [show]="isLoaded" [creationModalTemplate]="cretionModalTemplate" [creationModalData]="creationInputModalData" [createDefiniton]="createDefinition()" [refreshDefinition]="refreshCards()"></msp-creation-button>
+    <div fxFlex fxLayout="row">
+        <div class="card" *ngFor="let user of users; index as i">
+            <msp-card  
+                [title]="user.firstName + ' ' + user.lastName "
+                [subtitle]="'Escolaridade ' + user.educationLevelName"
+                [minWidth]="200" 
+                [minHeight]="100"
+                [actionsTemplate]="CardActions"
+                [actionsTemplateContext]="{$implicit: user}"
+                avatarImageSource="https://i.pinimg.com/originals/51/f6/fb/51f6fb256629fc755b8870c801092942.png"
+            >
+                <ng-container *ngTemplateOutlet="CardContent; context: {$implicit: user}" ></ng-container>
+            </msp-card>    
+        </div>
+    </div>
+</ng-container>
+
+<ng-template #CardContent let-user>
+    <p>
+        <span class="propertyName">{{ 'Email: ' }}</span>
+        <span>{{ user.emailAddress}}</span>
+    </p>
+    <p>
+        <span class="propertyName">{{'Data de nascimento: '}}</span>
+        <span>{{ user.formattedBirthDate.split(' ')[0] }}</span>
+    </p>
+</ng-template>
+
+<ng-template #CardActions let-user>
+    <div fxLayoutAlign="end">
+            <msp-update-button 
+                [show]="isLoaded"
+                [icon]="iconOfUpdateButton" 
+                [tooltip]="tooltipOfUpdateButton"
+                [entityToUpdate]="user"
+                [modificationModalTemplate]="modificationModalTemplate"
+                [updateDefinition]="updateDefinition()"
+                [refreshDefinition]="refreshCards()"
+            ></msp-update-button>
+        <msp-button type="icon" [icon]="deleteIcon" [tooltip]="deleteTooltip" (clicked)="confirmThenDeleteAndShowResponseMessage(user)"></msp-button>
+    </div>
+</ng-template>

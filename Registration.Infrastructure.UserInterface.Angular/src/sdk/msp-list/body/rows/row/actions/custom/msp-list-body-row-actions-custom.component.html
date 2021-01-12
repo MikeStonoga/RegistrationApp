@@ -1,0 +1,13 @@
+<ng-container *ngIf="hasListCustomActions; else EmptySlot">
+    <ng-container *ngFor="let action of listCustomActions">
+        <ng-container *ngIf="isToShowCustomAction(action)">
+            <msp-button type="icon" [style.maxWidth.px]="20"  [icon]="action.icon" [tooltip]="action.tooltip" (clicked)="action.actionDefinition(entityOutput)"></msp-button>
+        </ng-container>
+    </ng-container>
+</ng-container>
+
+<ng-template #EmptySlot>
+    <ng-container *ngIf="!service.isCrudList(listConfiguration)" >
+        <td></td>
+    </ng-container>
+</ng-template>

@@ -1,0 +1,12 @@
+<ng-container *ngIf="isLoaded">
+    <msp-creation-button 
+        [show]="hasListCrudMethods"
+        [icon]="creationIcon" 
+        [tooltip]="creationTooltip"
+        [creationModalTemplate]="creationModalTemplate"
+        [creationModalData]="inputModalData"
+        color="white"
+        [createDefiniton]="listConfiguration.actions.create.actionDefinition"
+        [refreshDefinition]="listConfiguration.actions.refresh"
+    ></msp-creation-button>
+</ng-container>

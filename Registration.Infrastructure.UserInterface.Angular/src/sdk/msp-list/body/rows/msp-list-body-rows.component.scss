@@ -1,0 +1,14 @@
+.shadowedRow {
+    background-color: #ececec;
+}
+
+.dataRow {
+    height: 25px;
+    width: 100%;
+    min-width: 100vw;
+    padding-bottom: 5px;
+}
+  
+.dataRow:hover {
+    background-color: rgba(0,0,0, 0.1);
+}

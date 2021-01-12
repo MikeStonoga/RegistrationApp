@@ -1,0 +1,6 @@
+<div *ngFor="let column of listColumns"  class="columnTitle" [style.width.px]="getColumnWidth(column)" >
+    {{column.title}}
+    <ng-container >
+    <msp-list-header-sorting-button [column]="column"></msp-list-header-sorting-button>
+    </ng-container>
+</div>

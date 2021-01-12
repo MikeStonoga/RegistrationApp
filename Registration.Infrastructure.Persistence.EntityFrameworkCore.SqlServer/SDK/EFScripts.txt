@@ -1,0 +1,4 @@
+﻿﻿// Registration.Infrastructure.Persistence.EntityFrameworkCore.SqlServer
+dotnet ef --startup-project ..\Registration.Infrastructure.ApplicationDelivery.WebHost\ migrations add "MIGRATION NAME HERE" --context "RegistrationDbContext"
+dotnet ef --startup-project ..\Registration.Infrastructure.ApplicationDelivery.WebHost\ migrations remove --context "RegistrationDbContext"
+dotnet ef --startup-project ..\Registration.Infrastructure.ApplicationDelivery.WebHost\ database update --context "RegistrationDbContext"

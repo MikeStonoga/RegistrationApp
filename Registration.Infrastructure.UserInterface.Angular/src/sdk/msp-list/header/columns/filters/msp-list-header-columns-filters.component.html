@@ -1,0 +1,10 @@
+<tr *ngIf="displayColumnsFiltersControl">
+    <td fxLayoutAlign="center">
+        <msp-list-header-columns-filters-clean-button [listConfiguration]="listConfiguration"></msp-list-header-columns-filters-clean-button>
+    </td>
+    <td *ngFor="let column of listColumns" class="dataCell">
+        <form [formGroup]="columnsFiltersFormGroup">
+            <msp-input fxLayoutAlign="center" [label]="column.title" [controlName]="column.valueAcessor" icon="search" (valueChanged)="filterByColumn()"></msp-input>
+        </form>
+    </td>
+</tr>

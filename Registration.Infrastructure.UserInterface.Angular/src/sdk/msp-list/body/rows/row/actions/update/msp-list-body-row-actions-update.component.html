@@ -1,0 +1,11 @@
+<ng-container *ngIf="isLoaded">
+    <msp-update-button 
+        [show]="hasListCrudMethods"
+        [icon]="iconOfUpdateButton" 
+        [tooltip]="tooltipOfUpdateButton"
+        [entityToUpdate]="entityToUpdate"
+        [modificationModalTemplate]="modificationModalTemplate"
+        [updateDefinition]="listConfiguration.actions.update.actionDefinition"
+        [refreshDefinition]="listConfiguration.actions.refresh"
+    ></msp-update-button>
+</ng-container>

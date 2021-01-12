@@ -1,0 +1,5 @@
+<tbody>
+    <div *ngFor="let entityOutput of listData.items; let rowIndex = index" [class]="'dataRow' + ' ' + isToApplyShadow(rowIndex)" >
+        <msp-list-body-row [listConfiguration]="listConfiguration" [entityOutput]="entityOutput" (selected)="emitSelected($event)"></msp-list-body-row>
+    </div>
+</tbody>

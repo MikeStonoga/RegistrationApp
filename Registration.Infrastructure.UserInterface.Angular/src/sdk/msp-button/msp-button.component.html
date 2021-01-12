@@ -1,0 +1,7 @@
+<ng-container *ngIf="show">
+  <ng-container *ngIf="type == 'icon'" >
+    <button mat-icon-button [style.marginRight.px]="5"[style.maxWidth.px]="size" [style.maxHeight.px]="size" [matTooltip]="tooltip" [disabled]="disabled" [disableRipple]="true" [style]="'color:' + color" (click)="buttonClicked()">
+      <msp-icon [icon]="icon" [label]="label" [size]="iconSize"></msp-icon><ng-content></ng-content>
+    </button>
+  </ng-container>
+</ng-container>

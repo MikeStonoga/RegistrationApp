@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\**" />
+    <Compile Remove="NovaPasta\**" />
+    <Content Remove="Controllers\**" />
+    <Content Remove="NovaPasta\**" />
+    <EmbeddedResource Remove="Controllers\**" />
+    <EmbeddedResource Remove="NovaPasta\**" />
+    <None Remove="Controllers\**" />
+    <None Remove="NovaPasta\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="WeatherForecast.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.10" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Registration.Domain\Registration.Domain.csproj" />
+    <ProjectReference Include="..\Registration.Infrastructure.Persistence.EntityFrameworkCore.SqlServer\Registration.Infrastructure.Persistence.EntityFrameworkCore.SqlServer.csproj" />
+    <ProjectReference Include="..\Registration.InterfaceAdapters.Controllers\Registration.InterfaceAdapters.Controllers.csproj" />
+    <ProjectReference Include="..\Registration.InterfaceAdapters.Gateways.Persistence\Registration.InterfaceAdapters.Gateways.Persistence.csproj" />
+    <ProjectReference Include="..\Registration.UseCases\Registration.UseCases.csproj" />
+  </ItemGroup>
+
+
+</Project>

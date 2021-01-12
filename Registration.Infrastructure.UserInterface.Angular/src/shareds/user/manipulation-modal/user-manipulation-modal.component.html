@@ -1,0 +1,22 @@
+<div class="modal" >
+  <h3>{{title}}</h3>
+  <form [formGroup]="form" >
+    <div fxLayout="column"  >
+      <div fxLayout="row">
+        <msp-input [controlName]="firstNameControl" [label]="firstNameInputLabel"></msp-input>
+        <msp-input [controlName]="lastNameControl" [label]="lastNameInputLabel"></msp-input>
+      </div>
+      <div fxLayout="row" fxFill>
+        <msp-input [controlName]="emailAddressControl" [label]="emailAddressInputLabel"></msp-input>
+      </div>
+      <div fxLayout="row">
+        <msp-datepicker [controlName]="birthDateControl" [label]="birthDateInputLabel" [filter]="dontAllowFutureDates"></msp-datepicker>
+        <msp-select [controlName]="educationLevelControl" [label]="educationLevelInputLabel" [options]="educationLevels"></msp-select>
+        <span></span>
+      </div>
+    </div>
+  </form>
+  <div fxLayout="row" fxLayoutAlign="end center">
+    <msp-confirmation-modal-buttons [disableCondition]="!canSave" (closed)="close($event)"></msp-confirmation-modal-buttons>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<msp-list-body-row-actions [listConfiguration]="listConfiguration" [entityOutput]="entityOutput"></msp-list-body-row-actions>
+
+<td *ngFor="let column of listColumns; let index = index" [style.textAlign]="column.contentAlign ? column.contentAlign : 'left'" [class]="'dataCell' + ' ' + isToApplyCheckboxColumnSize(column.type)" [style.width.px]="getColumnWidth(column) - 80" [style.minWidth.px]="column.width ? column.width : 20"
+    (click)="selectActionDefinition(entityOutput)" >
+    
+    
+    <ng-container *ngIf="column.type == 'text'">
+    {{entityOutput[column.valueAcessor]}}
+    </ng-container>
+    <ng-container *ngIf="column.type == 'checkbox'">
+    <!-- <msp-checkbox [checked]="entityOutput[column.valueAcessor]" label="" [disabled]="true"></msp-checkbox> -->
+    </ng-container>
+    <ng-container *ngIf="column.type == 'date'">
+    {{entityOutput[column.valueAcessor] | date: 'dd/MM/yyyy'}}
+    </ng-container>
+    <ng-container *ngIf="column.type == 'datetime'">
+        {{entityOutput[column.valueAcessor] | date: 'dd/MM/yyyy hh:mm a'}}
+    </ng-container>
+</td>

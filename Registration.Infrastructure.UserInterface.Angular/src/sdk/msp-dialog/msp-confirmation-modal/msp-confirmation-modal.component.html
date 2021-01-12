@@ -1,0 +1,6 @@
+<ng-container *ngIf="title">
+    <h3>{{title}}</h3>
+  </ng-container>
+  <p>{{message}}</p>
+  <msp-confirmation-modal-buttons (closed)="close($event)"></msp-confirmation-modal-buttons>
+  

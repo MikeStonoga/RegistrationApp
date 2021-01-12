@@ -1,0 +1,11 @@
+<msp-card title="Usuários" 
+    [minWidth]="200" 
+    [minHeight]="100" 
+    [actionsTemplate]="UserCardActions" 
+    avatarImageSource="https://i.pinimg.com/originals/51/f6/fb/51f6fb256629fc755b8870c801092942.png"
+></msp-card>
+
+<ng-template #UserCardActions>
+    <msp-button type="icon" [icon]="listIcon" tooltip="Lista" (clicked)="navigateToUsersList()"></msp-button>
+    <msp-button type="icon" [icon]="dashboardIcon" tooltip="Cartões" (clicked)="navigateToUsersCards()"></msp-button>
+</ng-template>

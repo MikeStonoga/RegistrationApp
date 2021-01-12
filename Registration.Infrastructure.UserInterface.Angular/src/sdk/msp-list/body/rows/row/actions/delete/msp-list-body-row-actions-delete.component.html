@@ -1,0 +1,8 @@
+<msp-button *ngIf="hasListCrudMethods" 
+    [size]="20" 
+    [style.maxWidth.px]="20"  
+    type="icon" 
+    [icon]="deleteIcon" 
+    [tooltip]="deleteTooltip" 
+    (clicked)="delete(entityOutput)"
+></msp-button>

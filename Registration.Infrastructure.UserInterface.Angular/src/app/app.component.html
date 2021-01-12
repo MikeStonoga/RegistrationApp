@@ -1,0 +1,27 @@
+<ng-container>
+  <div class="mat-app-background" [style.height.vh]="100">
+    <mat-toolbar color="primary">
+        <div fxFlex fxLayout="row" fxLayoutAlign="start center">
+          <msp-button [style.paddingTop.px]="5" [style.paddingLeft.px]="5" type="icon" icon="menu" color="#ffffff" (click)="drawer.toggle()"></msp-button>
+          {{title}}
+        </div>
+    </mat-toolbar>
+
+    <mat-drawer-container class="example-container" autosize>
+      <mat-drawer #drawer class="example-sidenav" mode="side">
+        <a routerLink="/home" type="button" mat-icon-button color="primary" (click)="drawer.toggle()">
+          <msp-icon matTooltip="Página Inicial" [icon]="homeIcon" matTooltipPosition="right"></msp-icon>
+        </a> <br>
+
+        <ng-container *ngFor="let page of pages">
+          <msp-menu [menuConfiguration]="page" (menuItemSelected)="drawer.toggle()"></msp-menu> <br>
+        </ng-container>
+      </mat-drawer>
+
+      <div class="example-sidenav-content">
+        <router-outlet></router-outlet>
+      </div>
+
+    </mat-drawer-container>
+  </div>
+</ng-container>

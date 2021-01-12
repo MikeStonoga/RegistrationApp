@@ -1,0 +1,10 @@
+<div class="columnsTitles">
+  <div *ngIf="hasActions || isToShowColumnsFilters" class="interactions" [style.maxWidth.px]="interactionsColumnSize" [style.minWidth.px]="interactionsColumnSize">
+    <msp-list-header-create-button [listConfiguration]="listConfiguration"></msp-list-header-create-button>
+    <msp-list-header-columns-filters-toggle-button [listConfiguration]="listConfiguration"></msp-list-header-columns-filters-toggle-button>
+  </div>
+  <msp-list-header-columns [listConfiguration]="listConfiguration" fxfxFill></msp-list-header-columns>
+</div>
+<msp-list-header-columns-filters [listConfiguration]="listConfiguration"></msp-list-header-columns-filters>
+  
+

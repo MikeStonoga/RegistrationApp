@@ -1,0 +1,8 @@
+<mat-paginator #MatPaginator
+    style="color: white; background-color: #3f51b5;" 
+    color="primary" 
+    [length]="numberOfEntityElements"
+    [pageSize]="listGetAllInputOptions.pageSize"
+    [pageSizeOptions]="pageSizeOptions"
+    (page)="updatePageSize($event)">
+</mat-paginator>
